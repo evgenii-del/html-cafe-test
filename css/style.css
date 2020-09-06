@@ -1,5 +1,6 @@
 body {
-    background-color: #eeeeee;
+    background-color: #ffffff;
+    overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -19,13 +20,22 @@ a {
     border: 0;
 }
 
+.wrapper {
+    max-width: 1204px;
+    padding: 0 20px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
 .container {
     max-width: 1130px;
     padding: 60px 10px;
     margin: 0 auto;
 }
 
-/* HEADER */
+/* Header */
+
 .header {
     background-color: #ffffff;
 }
@@ -85,10 +95,6 @@ a {
 
 /* Homepage */
 
-.homepage {
-    background-color: #ffffff;
-}
-
 .homepage__inner {
     width: 100%;
     max-width: 960px;
@@ -122,6 +128,7 @@ a {
 }
 
 .homepage__inner-search i {
+    color: rgb(118, 118, 118);
     position: absolute;
     top: 28px;
     left: 20px;
@@ -204,9 +211,6 @@ a {
 }
 
 /* Company */
-.company {
-    background-color: #ffffff;
-}
 
 .company__inner {
     display: flex;
@@ -237,6 +241,9 @@ a {
 }
 
 .company__inner-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-width: 200px;
     min-height: 200px;
     background-color: #f6f5f4;
@@ -261,10 +268,26 @@ a {
     font-weight: 600;
 }
 
-/* APPARTMENTS */
+/* Appartments */
+
+.appartments {
+    position: relative;
+}
+
+.appartments::after {
+    content: "";
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: #eeeeee;
+    transform: translateX(-50%);
+    z-index: -1;
+}
 
 .container__title {
-    padding: 65px 0;
+    padding: 0 0 65px 0;
 }
 
 .container__title h2 {
@@ -355,6 +378,7 @@ a {
 }
 
 .appartments__inner-search i {
+    color: rgb(118, 118, 118);
     position: absolute;
     top: 28px;
     left: 20px;
@@ -395,6 +419,7 @@ a {
 }
 
 .appartments__inner-all input {
+    cursor: pointer;
     width: 250px;
     height: 70px;
     border-radius: 5px;
@@ -406,15 +431,13 @@ a {
 }
 
 .appartments__inner-all input:hover {
+    cursor: pointer;
     transition: 0.7s;
     color: #ffffff;
     background-color: #131313;
 }
 
 /* How It Works? */
-.faq {
-    background-color: #ffffff;
-}
 
 .work-cards {
     display: flex;
@@ -561,9 +584,6 @@ a {
 }
 
 /* Services */
-.services {
-    background-color: #ffffff;
-}
 
 .services__inner-right {
     display: flex;
@@ -603,8 +623,22 @@ a {
 }
 
 /* Agents */
+.agents,
 .owl-carousel {
+    position: relative;
     background-color: #eeeeee;
+}
+
+.agents::after {
+    content: "";
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: #eeeeee;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .agents__inner-cards {
@@ -669,9 +703,6 @@ a {
 }
 
 /* Adds */
-.adds {
-    background-color: #ffffff;
-}
 
 .adds__inner-row {
     display: flex;
@@ -771,8 +802,7 @@ a {
 }
 
 .adds__inner-content a:hover {
-    color: #1f373d;
-    background-color: #ffffff;
+    opacity: 0.7;
     transition: 0.7s;
 }
 
@@ -868,7 +898,19 @@ a {
 }
 
 .footer {
+    position: relative;
+}
+
+.footer::after {
     background-color: #1f373d;
+    content: "";
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .footer__inner-categories {
@@ -896,4 +938,70 @@ a {
     color: #ffffff;
     font-weight: 400;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1240px) {
+    .homepage__inner {
+        right: 0;
+    }
+
+    .homepage__inner-logo {
+        left: 0;
+    }
+
+    .homepage__inner-scroll {
+        left: -40px;
+    }
+
+    .appartments__inner-cards {
+        justify-content: space-around;
+    }
+
+    .appartments__inner-more {
+        justify-content: space-around;
+    }
+
+    .work-cards {
+        justify-content: space-around;
+    }
+
+    .work-card {
+        margin: 10px;
+        filter: drop-shadow(0px 2px 5px rgba(23, 44, 51, 0.15));
+    }
+
+    .adds__inner-row {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .adds__inner-row .adds__inner-content {
+        margin-top: 15px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .adds__inner-image .right {
+        right: 0;
+        bottom: 0;
+    }
+
+    .adds__inner-image .left {
+        right: 0;
+        bottom: 0;
+    }
+
+    .second {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .company__inner-blocks {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+
 }

@@ -21,6 +21,17 @@ $(document).ready(function () {
         loop: true,
         margin: 20,
         autoplay: true,
-        autoplayTimeout: 2000
+        autoplayTimeout: 2000,
+        responsive: {
+            768: {
+                items: 1
+            },
+            1024: {
+                items: 2
+            },
+            1240: {
+                items: 3
+            }
+        }
     });
 });
