@@ -23,7 +23,7 @@ $(document).ready(function () {
         autoplay: true,
         autoplayTimeout: 2000,
         responsive: {
-            768: {
+            320: {
                 items: 1
             },
             1024: {
