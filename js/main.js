@@ -26,7 +26,7 @@ $(document).ready(function () {
             320: {
                 items: 1
             },
-            1024: {
+            870: {
                 items: 2
             },
             1240: {

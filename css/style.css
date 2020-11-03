@@ -49,6 +49,7 @@ label {
     justify-content: space-between;
     padding: 28px 0;
     align-items: center;
+    position: relative;
 
 }
 
@@ -976,7 +977,7 @@ label {
     }
 
     .homepage__inner-scroll {
-        left: -40px;
+        display: none;
     }
 
     .homepage__inner-scroll span {
@@ -1018,7 +1019,99 @@ label {
         margin-top: 30px;
 
     }
+
     .company__inner-blocks {
+        display: none;
+    }
+
+    .work-card {
+        text-align: center;
+        padding: 135px 10px 50px 10px;
+    }
+
+    .work-card:nth-child(1) h3::before {
+        display: none;
+    }
+
+    .work-card:nth-child(2) h3::before {
+        display: none;
+    }
+
+    .work-card:nth-child(3) h3::before {
+        display: none;
+    }
+    .card:nth-child(1) .work-card::before {
+        display: none;
+    }
+
+    .card:nth-child(2) .work-card::before {
+        display: none;
+    }
+
+    .card:nth-child(3) .work-card::before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+    .work-card {
+        padding: 20px 20px 40px 20px;
+        min-height: auto;
+    }
+
+    .services__inner-image {
+        display: none;
+    }
+
+    .adds__inner-image {
+        min-width: auto;
+    }
+
+    .services__inner-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-block:nth-child(2),
+    .content-block:nth-child(3){
+        margin-top: 25px;
+    }
+
+    .footer__inner-top {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .footer__inner-bottom {
+        flex-direction: column;
+    }
+
+    .footer__inner-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .footer__inner-info h3 {
+        margin: 0;
+    }
+
+    .footer__inner-category:last-child {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .appartments__inner-card {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+    .header__inner-inputs {
         display: none;
     }
 }
